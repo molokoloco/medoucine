@@ -110,7 +110,8 @@ $(function() {
         })
         .on("sortchange", function(event, ui) {
             updateSortableOrder();
-        });
+        })
+        .disableSelection();
 
     var buildSortable = function(value) { // Build Sortable consultations Liste
         //console.log('buildSortable', value);
