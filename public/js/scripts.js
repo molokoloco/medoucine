@@ -133,16 +133,13 @@ $(function() {
 
     buildSortable(["Naturopathie", "Réflexologie"]); // init first default list
 
-    $('body').on('click', '.closeSortable', function() { // Remove sortable item
+    $('body').on('click', '.closeSortable', function() { // link to Remove one sortable item
         var value = $(this).parent().data('value');
         $(".select-pure__selected-label").each(function() {
             if ($(this).text() == value) {
-                $(this).remove(); // Remove value in the input to
+                $(this).find('i').click(); // simulate close by user on the main selectPure so "onChange: buildSortable" call us again
             }
         });
-        $(this).parent('li').remove();
-        $("#sortable").sortable("refresh");
-        updateSortableOrder();
     });
 
     var wait = false;
