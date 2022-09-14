@@ -1,6 +1,7 @@
 
 # Exercice pour medoucine.com
-## Le but est de réaliser cette page : https://molokoloco.github.io/medoucine/public/
+## Le but est de réaliser cette page : [https://molokoloco.github.io/medoucine/public/](https://molokoloco.github.io/medoucine/public/)
+## Repository : [https://github.com/molokoloco/medoucine/](https://github.com/molokoloco/medoucine/)
 
 ![1](https://molokoloco.github.io/medoucine/public/img/medoucine1.png)
 

@@ -27,6 +27,12 @@
     font-size: 20px;
 }
 
+#cabinetRecurentOptions {
+    background-color: #faf4f1;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -147,7 +153,7 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: url("../img/input-cal.png") no-repeat right center;
+    background: #fff url("../img/input-cal.png") no-repeat right center;
 }
 
 .customFormCheck .form-check-input {
