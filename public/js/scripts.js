@@ -1,17 +1,11 @@
 /*
-    // © 2022 Copyright Julien Guézennec https://julienweb.fr
+    Copyright : Julien Guézennec © 2022 https://julienweb.fr
+    Repository : https://github.com/molokoloco/medoucine/
 */
 
 $(function() {
 
     "use strict";
-
-
-    // var cabinet = $('#cabinet')[0]; // Modale
-    // cabinet.addEventListener('shown.bs.modal', function() {
-    //     $('#cabinetDate').focus();
-    // });
-
 
     // https://monim67.github.io/bootstrap-datetimepicker/
     // https://bootstrap-datepicker.readthedocs.io/en/latest/
@@ -119,9 +113,7 @@ $(function() {
         for (var i = 0; i < value.length; i++) {
             html += '<li class="ui-state-default" data-value="' + value[i] + '"><i class="bi bi-grip-vertical"></i><span class="sortableOrder">' + (i + 1) + '</span>-' + value[i] + ' <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li >';
         }
-        $("#sortable")
-            .html(html) // Update new content
-            .sortable("refresh");
+        $("#sortable").html(html).sortable("refresh"); // Update new content
         $('#consultationsForm .invalid-feedback').hide();
     };
 
@@ -139,10 +131,7 @@ $(function() {
     buildSortable(["Naturopathie", "Réflexologie"]); // init first default list
 
     $('body').on('click', '.closeSortable', function() { // Remove sortable item
-
         var value = $(this).parent().data('value');
-        console.log('closeSortable', value);
-
         $(".select-pure__selected-label").each(function() {
             if ($(this).text() == value) {
                 $(this).remove(); // Remove value in the input to
