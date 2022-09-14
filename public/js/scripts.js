@@ -89,11 +89,15 @@ $(function() {
         { label: "Auriculothérapie", value: "Auriculothérapie" }
     ];
 
-    var updateSortableOrder = function(value) {
-        var index = $('#sortable .sortableOrder').length;
-        $('#sortable .sortableOrder').each(function() {
-            $(this).html(index--);
+    var updateSortableOrder = function() {
+        $('#sortable .sortableOrder').each(function(j) {
+            $(this).html(j + 1);
         });
+        setTimeout(function() {
+            $('#sortable .sortableOrder').each(function(j) {
+                $(this).html(j + 1);
+            });
+        }, 1000);
     };
 
     $("#sortable")
