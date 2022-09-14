@@ -1,6 +1,8 @@
 /*
     Copyright : Julien Guézennec © 2022 https://julienweb.fr
     Repository : https://github.com/molokoloco/medoucine/
+
+    + https://getbootstrap.com/docs/5.2/getting-started/introduction/
 */
 
 $(function() {
@@ -156,7 +158,7 @@ $(function() {
         setTimeout(function() { wait = false; }, 3000);
 
         var data = [];
-        $('#sortable li').each(function() { // Remove sortable item
+        $('#sortable li').each(function() { // Get sortable values
             data.push($(this).data('value'));
         });
 
