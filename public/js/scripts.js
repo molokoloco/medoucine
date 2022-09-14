@@ -94,7 +94,7 @@ $(function() {
     ];
 
     var updateSortableOrder = function() {
-        setTimeout(function() {
+        setTimeout(function() { // wait sortable DOM update
             $('#sortable .sortableOrder').each(function(j) {
                 $(this).html(j + 1);
             });
@@ -118,7 +118,7 @@ $(function() {
         // console.log('buildSortable', value);
         var html = '';
         for (var i = 0; i < value.length; i++) {
-            html += '<li class="ui-state-default" data-value="' + value[i] + '"><i class="bi bi-grip-vertical"></i><span class="sortableOrder">' + (i + 1) + '</span>-' + value[i] + ' <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li >';
+            html += '<li class="ui-state-default" data-value="' + value[i].replace(/"/g, "'") + '"><i class="bi bi-grip-vertical"></i><span class="sortableOrder">' + (i + 1) + '</span>-' + value[i] + ' <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li >';
         }
         $("#sortable").html(html).sortable("refresh"); // Update new content
         $('#consultationsForm .invalid-feedback').hide();
