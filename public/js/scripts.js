@@ -11,7 +11,8 @@ $(function() {
 
     // https://monim67.github.io/bootstrap-datetimepicker/
     // https://bootstrap-datepicker.readthedocs.io/en/latest/
-    $('#cabinetHeureDebut,#cabinetHeureFin').each(function() {
+
+    $('#cabinetHeureDebut,#cabinetHeureFin').each(function() { // TimePicker
         $(this).datetimepicker({
             format: 'HH:mm',
             locale: 'fr',
@@ -22,17 +23,18 @@ $(function() {
         });
     });
 
-    // https://bootstrap-datepicker.readthedocs.io/en/latest/
-    $('#cabinetDate,#cabinetDateRepetition').each(function() {
-        $(this).datepicker({
-            format: "DD dd MM yyyy",
-            language: "fr",
-            autoclose: true,
-            todayHighlight: true
+    $('#cabinetDate,#cabinetDateRepetition').each(function() { // DatePicker
+        $(this).datetimepicker({
+            format: 'dddd DD MMM yyyy',
+            locale: 'fr',
+            allowInputToggle: true,
+            showClose: true,
+            showClear: true,
+            showTodayButton: true
         });
     });
 
-    // Form Cabinet
+    // Form Cabinet -------------------------------------------------- //
 
     $('#btnCabinet').click(function() { // Reset form
         $('form.was-validated').removeClass('was-validated');
@@ -69,7 +71,7 @@ $(function() {
         return false;
     });
 
-    // Form consultations
+    // Form consultations -------------------------------------------------- //
 
     $('#btnConsultations').click(function() {
         $('form.was-validated').removeClass('was-validated');
@@ -99,6 +101,8 @@ $(function() {
         }, 1000);
     };
 
+    // https://api.jqueryui.com/sortable/
+    // https://jqueryui.com/sortable/
     $("#sortable")
         .sortable({
             placeholder: "ui-state-highlight",
@@ -111,7 +115,7 @@ $(function() {
         .disableSelection();
 
     var buildSortable = function(value) { // Build Sortable consultations Liste
-        //console.log('buildSortable', value);
+        // console.log('buildSortable', value);
         var html = '';
         for (var i = 0; i < value.length; i++) {
             html += '<li class="ui-state-default" data-value="' + value[i] + '"><i class="bi bi-grip-vertical"></i><span class="sortableOrder">' + (i + 1) + '</span>-' + value[i] + ' <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li >';
