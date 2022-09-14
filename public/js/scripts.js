@@ -90,9 +90,6 @@ $(function() {
     ];
 
     var updateSortableOrder = function() {
-        $('#sortable .sortableOrder').each(function(j) {
-            $(this).html(j + 1);
-        });
         setTimeout(function() {
             $('#sortable .sortableOrder').each(function(j) {
                 $(this).html(j + 1);

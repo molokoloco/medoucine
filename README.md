@@ -1,15 +1,15 @@
 
 # Exercice pour medoucine.com
 ## Le but est de réaliser cette page : 
-URL : [https://molokoloco.github.io/medoucine/public/](https://molokoloco.github.io/medoucine/public/)
-CODE : [https://github.com/molokoloco/medoucine/tree/main/public](https://github.com/molokoloco/medoucine/tree/main/public)
+URL : [https://molokoloco.github.io/medoucine/public/](https://molokoloco.github.io/medoucine/public/)  
+CODE : [https://github.com/molokoloco/medoucine/tree/main/public](https://github.com/molokoloco/medoucine/tree/main/public)  
 
 ![1](https://molokoloco.github.io/medoucine/public/img/medoucine1.png)
 
 Le menu utilisateur a droite est un menu déroulant contenant les menu "mon compte" et "déconnexion"
 
 Gérer mon cabinet
-Le bouton Gérer mon cabinet doit ouvrir la modale suivante:
+Le bouton Gérer mon cabinet doit ouvrir la modale suivante :
 
 ![2](https://molokoloco.github.io/medoucine/public/img/medoucine2.png)
 
@@ -22,7 +22,7 @@ Le lieu de consultation est une liste déroulante à choix simple contenant les 
 Les boutons et tout autre éléments cliquables doivent avoir un design au hover, au click, et le curseur doit indiquer que l'élément est cliquable. 
 
 Gérer mes consultation
-Le bouton "Gérer mes consultation" ouvre une page avec le même template contenant un formulaire avec un champs à sélection multiple:
+Le bouton "Gérer mes consultation" ouvre une page avec le même template contenant un formulaire avec un champs à sélection multiple :
 
 ![3](https://molokoloco.github.io/medoucine/public/img/medoucine3.png)
 
