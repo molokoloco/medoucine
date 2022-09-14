@@ -7,7 +7,7 @@
     "homepage": "",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/molokoloco/medoucine.git"
     },
     "main": "src/index.js",
     "scripts": {
