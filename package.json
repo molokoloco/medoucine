@@ -1,0 +1,37 @@
+{
+    "name": "medoucine.com",
+    "version": "0.2.0",
+    "description": "",
+    "author": "JG 2022",
+    "license": "GPL-3.0-or-later",
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "main": "src/index.js",
+    "scripts": {
+        "start": "set Node_ENV=production && node src/index.js",
+        "babel": "./node_modules/.bin/babel",
+        "build": "babel ./public/scripts.js --out-file ./public/scripts-ie.js --source-maps --no-comments",
+        "open": "npm run start && browser http://ihavebp.eu.ngrok.io",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "axios": "^0.21.4",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "googleapis": "^85.0.0",
+        "medoucine": "^11.0.0",
+        "http": "^0.0.1-security",
+        "method-override": "^3.0.0",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7",
+        "simple-async-foreach": "^0.1.4"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.15.4",
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6"
+    }
+}
