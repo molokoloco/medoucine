@@ -50,4 +50,13 @@ Les encarts ordonnables ne semblent pas fonctionner en version mobile, à re-tes
 Je dois améliorer la taille du switch pour qu'il soit un peu plus gros...  
 ~~J'ai utilisé 2 plugins, un datepicker et un timepicker, mais je pense qu'un seul aurait suffit, todo optim~~
 
+Librairies et extensions JS utilisés :
+* jQuery-3.6.1
+* Moment-with-locales
+* Bootstrap
+* Bootstrap-datetimepicker2
+* Selectpure
+* jQuery-ui
+* Fontawesome
+
 Dites-moi ce que vous en pensez, je suis ouvert ^^
