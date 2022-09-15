@@ -95,7 +95,7 @@ $(function() {
 
     var updateSortableOrder = function() {
         setTimeout(function() { // wait sortable DOM update
-            $('#sortable .sortableOrder').each(function(j) {
+            $('#consultationsOrder .sortableOrder').each(function(j) {
                 $(this).html(j + 1);
             });
         }, 1000);
@@ -103,7 +103,7 @@ $(function() {
 
     // https://api.jqueryui.com/sortable/
     // https://jqueryui.com/sortable/
-    $("#sortable")
+    $("#consultationsOrder")
         .sortable({
             placeholder: "ui-state-highlight",
             forcePlaceholderSize: true,
@@ -120,7 +120,7 @@ $(function() {
         for (var i = 0; i < value.length; i++) {
             html += '<li class="ui-state-default" data-value="' + value[i].replace(/"/g, "'") + '"><i class="bi bi-grip-vertical"></i><span class="sortableOrder">' + (i + 1) + '</span>-' + value[i] + ' <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li >';
         }
-        $("#sortable").html(html).sortable("refresh"); // Update new content
+        $("#consultationsOrder").html(html).sortable("refresh"); // Update new content
         $('#consultationsForm .invalid-feedback').hide();
     };
 
@@ -159,7 +159,7 @@ $(function() {
         setTimeout(function() { wait = false; }, 3000);
 
         var data = [];
-        $('#sortable li').each(function() { // Get sortable values
+        $('#consultationsOrder li').each(function() { // Get sortable values
             data.push($(this).data('value'));
         });
 

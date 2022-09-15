@@ -191,13 +191,13 @@ select,
 /* jQuery UI Sortables
 --------------------------------------------------  */
 
-#sortable {
+#consultationsOrder {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#sortable li {
+#consultationsOrder li {
     margin: 0 3px 3px 3px;
     padding: 5px 5px 5px 15px;
     height: 30px;

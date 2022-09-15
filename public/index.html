@@ -97,14 +97,14 @@
                             <div class="col col-3 mb-3">
                                 <label for="cabinetHeureFin" class="form-label">Fin</label>
                                 <input id="cabinetHeureFin" name="cabinetHeureFin" type="text" class="form-control" placeholder="15:00" required />
-                                <div class="invalid-feedback">Vous devez choisir une heuire de fin.</div>
+                                <div class="invalid-feedback">Vous devez choisir une heure de fin.</div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col col-12 ms-3 mb-3">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input " type="checkbox" role="switch" id="cabinetRecurent" name="cabinetRecurent" checked>
+                                    <input class="form-check-input" type="checkbox" role="switch" value="1" id="cabinetRecurent" name="cabinetRecurent" checked>
                                     <label class="form-check-label" for="cabinetRecurent">Créneau récurent</label>
                                 </div>
                             </div>
@@ -131,25 +131,25 @@
                                     <label class="form-label">Jours concernés :</label>
                                     <div class="input-group mb-3 customFormCheck">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="L" id="L" name="L" checked> <label class="form-check-label" for="L">L</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetL" name="cabinetL" checked> <label class="form-check-label" for="cabinetL">L</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="M" name="M"> <label class="form-check-label" for="M">M</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetM" name="cabinetM"> <label class="form-check-label" for="cabinetM">M</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="Me" name="Me"> <label class="form-check-label" for="Me">M</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetMe" name="cabinetMe"> <label class="form-check-label" for="cabinetMe">M</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="J" name="J"> <label class="form-check-label" for="J">J</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetJ" name="cabinetJ"> <label class="form-check-label" for="cabinetJ">J</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="V" name="V"> <label class="form-check-label" for="V">V</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetV" name="cabinetV"> <label class="form-check-label" for="cabinetV">V</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="S" name="S"> <label class="form-check-label" for="S">S</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetS" name="cabinetS"> <label class="form-check-label" for="cabinetS">S</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" value="M" id="D" name="D"> <label class="form-check-label" for="D">D</label>
+                                            <input class="form-check-input" type="checkbox" value="1" id="cabinetD" name="cabinetD"> <label class="form-check-label" for="cabinetD">D</label>
                                         </div>
 
                                     </div>
@@ -159,9 +159,9 @@
 
                         <div class="row">
                             <div class="col col-6">
-                                <label for="lieu" class="form-label">Lieu de consultation</label>
+                                <label for="cabinetLieu" class="form-label">Lieu de consultation</label>
                                 <div class="input-group date">
-                                    <select id="lieu" name="lieu" class="form-select mb-3" aria-label="Lieu de consultation" required>
+                                    <select id="cabinetLieu" name="cabinetLieu" class="form-select mb-3" aria-label="Lieu de consultation" required>
                                         <option value="75101" selected>Paris 1er (75101)</option>
                                         <option value="75102">Paris 2e (75102)</option>
                                         <option value="75103">Paris 3e (75103)</option>
@@ -188,8 +188,8 @@
                             <div class="col col-6">
                                 <label class="form-label">&nbsp;</label>
                                 <div class="form-check form-switch pt-2">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="teleconsultation" name="teleconsultation">
-                                    <label class="form-check-label" for="teleconsultation">Téléconsultation acceptée</label>
+                                    <input class="form-check-input" type="checkbox" role="switch" value="1" id="cabinetTeleconsultation" name="cabinetTeleconsultation">
+                                    <label class="form-check-label" for="cabinetTeleconsultation">Téléconsultation acceptée</label>
                                 </div>
                             </div>
                         </div>
@@ -225,8 +225,8 @@
                         </div>
                         <div class="row">
                             <div class="col col-12 mb-3">
-                                <label for="consultationsListe" class="form-label">Ordre de préférence</label>
-                                <ul id="sortable">
+                                <label for="consultationsOrder" class="form-label">Ordre de préférence</label>
+                                <ul id="consultationsOrder">
                                     <!-- <li class="ui-state-default"><i class="bi bi-grip-vertical"></i> 1-Naturopathie <a href="#" class="closeSortable"><i class="bi bi-x"></i></a></li> -->
                                 </ul>
                             </div>
@@ -306,6 +306,7 @@
     <!--Footer-->
 
 </body>
+
 <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
