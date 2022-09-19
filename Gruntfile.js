@@ -50,6 +50,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
+                compress: true,
                 sourceMap: true,
                 sourceMapIncludeSources: true,
                 sourceMapIn: function (path) {
@@ -66,6 +67,8 @@ module.exports = function (grunt) {
         },
         cssmin: {
             options: {
+                keepSpecialComments: false,
+                sourceMap: true,
                 shorthandCompacting: false,
                 roundingPrecision: -1
             },
@@ -91,6 +94,6 @@ module.exports = function (grunt) {
     // grunt.loadNpmTasks('grunt-nodemon');
     // grunt.registerTask('default', ['nodemon'])
 
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
 };
