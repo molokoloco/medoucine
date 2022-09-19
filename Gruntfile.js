@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         //     }
         // },
         jshint: {
-            files: ['Gruntfile.js', 'public/**/*.js'],
+            files: ['Gruntfile.js', 'public/js/scripts.js'],
             options: {
                 globals: {
                     jQuery: true,
@@ -92,4 +92,5 @@ module.exports = function (grunt) {
     // grunt.registerTask('default', ['nodemon'])
 
     grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+    grunt.registerTask('test', ['jshint']);
 };

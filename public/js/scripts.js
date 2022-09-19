@@ -77,7 +77,7 @@ $(function() {
         $('form.was-validated').removeClass('was-validated');
     });
 
-    const consultationsListe = [
+    var consultationsListe = [
         { label: "Naturopathie", value: "Naturopathie" },
         { label: "Réflexologie", value: "Réflexologie" },
         { label: "Médecine traditionnelle chinoise", value: "Médecine traditionnelle chinoise" },
@@ -146,7 +146,7 @@ $(function() {
         });
     });
 
-    var wait = false;
+    // var wait = false; // Already created
     var $consultationsForm = $("#consultationsForm");
 
     $consultationsForm.submit(function(event) {
