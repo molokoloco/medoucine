@@ -1,37 +1,30 @@
 {
     "name": "medoucine.com",
-    "version": "0.2.0",
-    "description": "",
+    "version": "0.2.1",
+    "description": "https://github.com/molokoloco/medoucine/blob/main/README.md",
     "author": "JG 2022",
     "license": "GPL-3.0-or-later",
-    "homepage": "",
+    "homepage": "https://molokoloco.github.io/medoucine/public/",
     "repository": {
         "type": "git",
         "url": "https://github.com/molokoloco/medoucine.git"
     },
-    "main": "src/index.js",
+    "main": "public/index.html",
     "scripts": {
-        "start": "set Node_ENV=production && node src/index.js",
-        "babel": "./node_modules/.bin/babel",
-        "build": "babel ./public/scripts.js --out-file ./public/scripts-ie.js --source-maps --no-comments",
-        "open": "npm run start && browser http://ihavebp.eu.ngrok.io",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "npm run open",
+        "open": "concurrently \"http-server -a localhost -p 1234 -o ./public/ \" \"open http://localhost:1234\"",
+        "build": "grunt default",
+        "test": "grunt test"
     },
-    "dependencies": {
-        "axios": "^0.21.4",
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "googleapis": "^85.0.0",
-        "medoucine": "^11.0.0",
-        "http": "^0.0.1-security",
-        "method-override": "^3.0.0",
-        "morgan": "^1.10.0",
-        "path": "^0.12.7",
-        "simple-async-foreach": "^0.1.4"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "@babel/cli": "^7.15.4",
-        "@babel/core": "^7.15.5",
-        "@babel/preset-env": "^7.15.6"
+        "concurrently": "^7.4.0",
+        "grunt": "^1.5.3",
+        "grunt-contrib-concat": "^2.1.0",
+        "grunt-contrib-cssmin": "^4.0.0",
+        "grunt-contrib-jshint": "^3.2.0",
+        "grunt-contrib-uglify": "^5.2.2",
+        "grunt-contrib-watch": "^1.1.0",
+        "http-server": "^14.1.1"
     }
 }
